@@ -1,0 +1,197 @@
+/* Styles de base */
+body {
+    scroll-behavior: smooth;
+}
+
+/* Navbar personnalisée */
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+}
+
+.nav-link:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    right: 1rem;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.btn-register {
+    background: linear-gradient(to right, rgb(34, 215, 249), rgb(106, 230, 67));
+    color: rgb(3, 14, 12);
+    border-radius: 9999px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+}
+
+/* Carousel personnalisé */
+.carousel-image {
+    height: 90vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-caption {
+    position: static;
+    padding: 2rem;
+    background-color: rgba(3, 14, 12, 0.7);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 6px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+}
+
+.carousel-indicators .active {
+    background-color: rgb(34, 215, 249);
+}
+
+/* Boutons */
+.btn-explore {
+    background: linear-gradient(to right, rgb(34, 215, 249), rgb(106, 230, 67));
+    color: rgb(3, 14, 12);
+}
+
+.btn-explore:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(34, 215, 249, 0.3);
+}
+
+.btn-more {
+    background: linear-gradient(to right, rgb(34, 215, 249), rgb(69, 222, 160));
+    color: rgb(3, 14, 12);
+}
+
+.btn-more:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(34, 215, 249, 0.3);
+}
+
+.btn-contact {
+    background: transparent;
+    color: rgb(106, 230, 67);
+    border: 2px solid rgb(106, 230, 67);
+}
+
+.btn-contact:hover {
+    background: rgb(106, 230, 67);
+    color: rgb(3, 14, 12);
+    transform: translateY(-3px);
+}
+
+/* Cartes news et événements */
+.news-card, .event-card {
+    transition: all 0.3s ease;
+    background: rgba(3, 14, 12, 0.7);
+    border: 1px solid rgba(34, 215, 249, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.news-card:hover, .event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(34, 215, 249, 0.1);
+    border-color: rgba(34, 215, 249, 0.3);
+}
+
+.news-image, .event-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+/* Effet de texte dégradé */
+.gradient-text {
+    background: linear-gradient(to right, rgb(34, 215, 249), rgb(106, 230, 67));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* Images à propos */
+.about-image {
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+/* Animation des sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-image {
+        height: 70vh;
+        min-height: 500px;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 2.5rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-image {
+        height: 60vh;
+        min-height: 400px;
+    }
+    
+    .carousel-caption {
+        padding: 1rem;
+    }
+    
+    .carousel-caption h1 {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
